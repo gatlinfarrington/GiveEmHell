@@ -199,14 +199,6 @@ flex-basis: 100%;
   margin-top: 5px;
 }
 
-#home,
-#about,
-#interested {
-    position: -webkit-sticky;
-    /* position: sticky; */
-    top: 0; /* Adjust this value to control when the section becomes sticky */
-}
-
 
 
 /* Example: Apply styles for screens narrower than 768px (standard mobile screens) */

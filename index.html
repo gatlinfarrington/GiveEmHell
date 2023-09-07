@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600&display=swap">
+        <style>
+            .bg-black{
+              background-color: #0f0f0f;
+            }
+            body {
+              color: #FFC627;
+            }
+            h1{
+              color:#8c1D40;
+            }
+            .spacer{
+              height:7.5vh;
+            }
+
+            footer{
+              background-color: #FFC627;
+              color:#0f0f0f;
+            }
+
+        </style>
+      </head>
+      <body class="bg-black">
+        <div style="position: sticky; width: 100%;">
+            <nav class="circle">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#interested">Interested?</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="home" class="logoContainer">
+          <img src="logo.png">
+        </div>
+        <div id="about">
+          <div class="spacer"></div>
+          <div id="mission" class="container">
+            <div class="row">
+              <div style="height:10%"></div>
+            </div>
+            <div class="row">
+              <dov class="col">
+                <h1>Mission Statement</h1>
+              </dov>
+            </div>
+            <div class="row">
+              <div class="col-lg-9 col-md-12">
+                <p>This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... v </p>
+            </div>
+            <div class="row text-end">
+              <dov class="col">
+                <h1>Who are We?</h1>
+              </dov>
+            </div>
+            <div class="row text-end">
+              <div class="col-lg-3 col-md-12">
+              </div>
+              <div class="col-lg-9 col-md-12">
+                <p>This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... v </p>
+            </div>
+              
+            </div>
+          </div>
+        </div>
+       
+        <hr>
+        <div id="events" class="container">
+          <div class="row">
+            <h1>Upcoming Events</h1>
+          </div>
+          <div class="row">
+            <p style="margin-left:15px;">9/30 - Hundred Mile Brewing Company - ASU @ Cal Viewing Party</p>
+            <p style="margin-left:15px;">More events coming soon</p>
+          </div>
+        </div>
+        <div id="interested" class="logoContainer">
+          <p>Interested?</p>
+        </div>
+
+        <footer class="text-center py-4">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                      <h4>Company Name</h4>
+                      <p>1234 Street Address</p>
+                      <p>City, State ZIP Code</p>
+                      <p>Email: info@example.com</p>
+                      <p>Phone: (123) 456-7890</p>
+                  </div>
+                  <div class="col-md-6">
+                      <h4>Follow Us</h4>
+                      <!-- Add your social media icons or links here -->
+                  </div>
+              </div>
+          </div>
+      </footer>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              const scrollLinks = document.querySelectorAll(".scroll-link");
+          
+              scrollLinks.forEach(function(link) {
+                  link.addEventListener("click", function(e) {
+                      e.preventDefault();
+          
+                      const targetId = this.getAttribute("href").substring(1);
+                      const targetElement = document.getElementById(targetId);
+          
+                      if (targetElement) {
+                          window.scrollTo({
+                              top: targetElement.offsetTop,
+                              behavior: "smooth" // Add smooth scrolling behavior
+                          });
+          
+                          // Optional: Highlight the active link
+                          scrollLinks.forEach(function(link) {
+                              link.classList.remove("active");
+                          });
+                          this.classList.add("active");
+                      }
+                  });
+              });
+          });
+          </script>
+    </body>
+</html>

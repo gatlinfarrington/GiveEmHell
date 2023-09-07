@@ -1,0 +1,187 @@
+
+/* 
+COLORS
+Lavender Web: #DFD9E2
+RED CRAYOLA: #ED254E
+Maximum Blue: #62B6CB
+Purple: #531CB3
+Rich Black: #001011
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700&display=swap');
+
+html{
+  background-color: #0f0f0f;
+}
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: #0f0f0f;
+}
+.logoContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align:center;
+      height:100%;
+}
+.testContainer{
+  
+}
+nav {
+  width: 120%;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,15%);
+  margin-left: -10%;
+  padding: -20px;
+  position:fixed;
+  top:0;
+  z-index:100;
+  backdrop-filter: blur(4px);
+  color:#F7F7F7;
+}
+
+
+/**/
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #8C1D40; /* Box Color at full size*/
+  }
+}
+
+
+/*Nav Circle*/
+nav.circle {
+  width: 120%;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,15%);
+  margin-left: -10%;
+  padding: -20px;
+  position:fixed;
+  top:0;
+  z-index:100;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height:8%;
+  color:#F7F7F7;
+}
+nav.circle ul {
+  list-style: none;
+  text-align: center;
+}
+ul{
+margin:0;
+padding:5px;
+display:flex;color:#F7F7F7;
+}
+
+ul li{
+list-style:none;
+margin:0 20px;
+transition:0.5s;
+}
+
+ul li a{
+display: block;
+position:relative;
+text-decoration:none;
+padding:5px;
+font-size:18px;
+color:#F7F7F7;
+text-transform:uppercase;
+transition:0.5s;
+
+}
+
+ul:hover li a{
+transform:scale(1.5);
+opacity:0.2;
+filter:blur(2px);
+}
+
+ul li a:hover{
+transform:scale(1.5);
+opacity:1;
+filter:blur(0);
+text-decoration:none;
+color:#fff;
+}
+
+ul li a:before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#8C1D40;
+color:#0f0f0f;
+transition:0.5s;
+transform-origin:right;
+transform:scaleX(0);
+z-index:-1;
+}
+
+ul li a:hover:before{
+transition:transform 0.5s;
+transform-origin:left;
+transform:scaleX(1);
+}
+
+.scroll-link {
+  cursor: pointer;
+}
+
+/* Optional: Style for active link */
+.scroll-link.active {
+  color: #8C1D40 /* Change to your preferred color */
+}
+
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+  background: #8C1D40;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8C1D40;
+}
+
+.flex-break{
+flex-basis: 100%;
+}
+
+
+/* Example: Apply styles for screens narrower than 768px (standard mobile screens) */
+@media (max-width: 1290px) {
+  /* Add your mobile-specific styles here */
+  /* Increase header text size */
+  h1 {
+    font-size: 100px; /* Adjust the size as needed */
+}
+
+/* Increase paragraph text size */
+p {
+    font-size: 16px; /* Adjust the size as needed */
+}
+}

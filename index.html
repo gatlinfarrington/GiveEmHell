@@ -3,6 +3,7 @@
         <link rel="stylesheet" href="styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600&display=swap">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             .bg-black{
               background-color: #0f0f0f;
@@ -25,7 +26,7 @@
         </style>
       </head>
       <body class="bg-black">
-        <div style="position: sticky; width: 100%;">
+        <div id="navBar" style="position: sticky; width: 100%;">
             <nav class="circle">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -34,41 +35,52 @@
                 </ul>
             </nav>
         </div>
-
-        <div id="home" class="logoContainer">
-          <img src="logo.png">
-        </div>
-        <div id="about">
-          <div class="spacer"></div>
-          <div id="mission" class="container">
-            <div class="row">
-              <div style="height:10%"></div>
-            </div>
-            <div class="row">
-              <dov class="col">
-                <h1>Mission Statement</h1>
-              </dov>
-            </div>
-            <div class="row">
-              <div class="col-lg-9 col-md-12">
-                <p>This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... v </p>
-            </div>
-            <div class="row text-end">
-              <dov class="col">
-                <h1>Who are We?</h1>
-              </dov>
-            </div>
-            <div class="row text-end">
-              <div class="col-lg-3 col-md-12">
+        <section id="home">
+          <div id="home" class="logoContainer">
+            <img src="logo.png" style="max-width:80%">
+            <div id="scroll-indicator">
+              <div class="arrow-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="#888" d="M12 17l-8-8h16z"/>
+                  </svg>
               </div>
-              <div class="col-lg-9 col-md-12">
-                <p>This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... v </p>
-            </div>
-              
+              <div class="text">Scroll</div>
             </div>
           </div>
-        </div>
-       
+        </section>
+        <section id="about">
+          <div id="about">
+            <div class="spacer"></div>
+            <div id="mission" class="container">
+              <div class="row">
+                <div style="height:10%"></div>
+              </div>
+              <div class="row">
+                <dov class="col">
+                  <h1>Mission Statement</h1>
+                </dov>
+              </div>
+              <div class="row">
+                <div class="col-lg-9 col-md-12">
+                  <p>This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... v </p>
+              </div>
+              <div class="row text-end">
+                <dov class="col">
+                  <h1>Who are We?</h1>
+                </dov>
+              </div>
+              <div class="row text-end">
+                <div class="col-lg-3 col-md-12">
+                </div>
+                <div class="col-lg-9 col-md-12">
+                  <p>This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... v </p>
+              </div>
+                
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
         <hr>
         <div id="events" class="container">
           <div class="row">
@@ -79,16 +91,18 @@
             <p style="margin-left:15px;">More events coming soon</p>
           </div>
         </div>
-        <div id="interested" class="textContainer">
-          <div class="container">
-            <div class="row">
-              <h1>Interested?</h1>
-            </div>
-            <div class="row">
-              <p>Fill out this form!</p>
+        <section id="interested">
+          <div id="interested" class="textContainer">
+            <div class="container">
+              <div class="row">
+                <h1>Interested?</h1>
+              </div>
+              <div class="row">
+                <p>Fill out this form!</p>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <footer class="text-center py-4">
           <div class="container">
@@ -134,5 +148,40 @@
               });
           });
           </script>
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              const scrollIndicator = document.getElementById("scroll-indicator");
+          
+              // Show the scroll indicator initially
+              scrollIndicator.style.opacity = "1";
+          
+              // Hide the scroll indicator when the user starts to scroll
+              window.addEventListener("scroll", function() {
+                  if (window.scrollY > 10) {
+                      scrollIndicator.style.opacity = "0";
+                  }
+              });
+          });
+          
+          
+          </script>
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              const scrollIndicator = document.getElementById("scroll-indicator");
+          
+              // Initially, set the scroll indicator to be visible
+              scrollIndicator.style.opacity = "1";
+          
+              window.addEventListener("scroll", function() {
+                  // Check if the user has scrolled back to the top
+                  if (window.scrollY === 0) {
+                      scrollIndicator.style.opacity = "1"; // Reappear the scroll indicator
+                  } else {
+                      scrollIndicator.style.opacity = "0"; // Hide the scroll indicator
+                  }
+              });
+          });          
+          </script>
+          
     </body>
 </html>

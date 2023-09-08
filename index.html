@@ -3,6 +3,9 @@
         <link rel="stylesheet" href="styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600&display=swap">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv='cache-control' content='no-cache'> 
         <meta http-equiv='expires' content='0'> 
@@ -13,8 +16,12 @@
             }
             body {
               color: #FFC627;
+              font-family: 'Quantico', sans-serif;
             }
             h1{
+              color:#8c1D40;
+            }
+            h2{
               color:#8c1D40;
             }
             .spacer{
@@ -24,6 +31,14 @@
             footer{
               background-color: #FFC627;
               color:#0f0f0f;
+            }
+            .pillar{
+              display:flex;
+              column:wrap;
+              align-items: flex-end;
+            }
+            .pillar h2{
+              padding-right:10px;
             }
 
         </style>
@@ -40,7 +55,7 @@
         </div>
         <section id="home">
           <div id="home" class="logoContainer">
-            <img src="logo.png" style="max-width:80%">
+            <img src="GiveEmLogo.png" style="max-width:80%">
             <div id="scroll-indicator">
               <div class="arrow-container">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -60,13 +75,39 @@
               </div>
               <div class="row">
                 <dov class="col">
-                  <h1>Mission Statement</h1>
+                  <h1 style="color:#FFC627">Mission Statement</h1>
                 </dov>
               </div>
               <div class="row">
-                <div class="col-lg-9 col-md-12">
-                  <p>This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... This is placeholder text... v </p>
-              </div>
+                <div class="pillar">
+                  <h2>Pillar 1</h2>
+                  <p>This is a description of pillar 1</p>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="pillar">
+                    <h2>Pillar 2</h2>
+                    <p>This is a description of pillar 2</p>
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="pillar">
+                      <h2>Pillar 3</h2>
+                      <p>This is a description of pillar 3</p>
+                    </div>
+                    </div>
+                    <div class="row">
+                      <div class="pillar">
+                        <h2>Pillar 4</h2>
+                        <p>This is a description of pillar 4</p>
+                      </div>
+                      </div>
+                      <div class="row">
+                        <div class="pillar">
+                          <h2>Pillar 5</h2>
+                          <p>This is a description of pillar 5</p>
+                        </div>
+                        </div>
               <div class="row text-end">
                 <dov class="col">
                   <h1>Who Are We?</h1>

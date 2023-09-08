@@ -9,14 +9,21 @@ Rich Black: #001011
 */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@600&display=swap');
+@font-face {font-family: 'Tektur'; src: url('https://fonts.googleapis.com/css2?family=Tektur:wght@600&display=swap');}
 
 html{
   background-color: #0f0f0f;
+  font-family: 'Tektur';
 }
 body {
-  font-family: 'Hanken Grotesk', sans-serif;
+  /* font-family: 'Hanken Grotesk', sans-serif; */
+  font-family: 'Tektur';
   background-color: #0f0f0f;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* This prevents horizontal scrolling */
 }
 .logoContainer{
       display: flex;

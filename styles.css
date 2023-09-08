@@ -25,6 +25,7 @@ body {
     padding: 0;
     overflow-x: hidden; /* This prevents horizontal scrolling */
 }
+
 .logoContainer{
       display: flex;
       justify-content: center;
@@ -213,7 +214,7 @@ flex-basis: 100%;
   /* Add your mobile-specific styles here */
   /* Increase header text size */
   h1 {
-    font-size: 100px; /* Adjust the size as needed */
+    /* font-size: 100px; Adjust the size as needed */
 }
 
 /* Increase paragraph text size */
@@ -232,4 +233,40 @@ nav{
   #scroll-indicator{
     display:none;
   }
+}
+
+.bg-black{
+  background-color: #0f0f0f;
+}
+body {
+  /* color: #FFC627; */
+  color:#f7f7f7;
+  font-family: 'Quantico', sans-serif;
+}
+h1{
+  /* color:#f7f7f7;
+   */color: #FFC627;
+}
+h2{
+  /* color:#f7f7f7; */
+  color: #FFC627;
+}
+.spacer{
+  height:7.5vh;
+}
+
+footer{
+  background-color: #FFC627;
+  color:#0f0f0f;
+}
+.pillar{
+  display:flex;
+  column:wrap;
+  align-items: flex-end;
+}
+.pillar h2{
+  padding-right:10px;
+}
+a{
+  color: inherit;
 }

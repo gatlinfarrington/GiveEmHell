@@ -213,10 +213,8 @@ flex-basis: 100%;
 @media (max-width: 1290px) {
   /* Add your mobile-specific styles here */
   /* Increase header text size */
-  h1 {
-    /* font-size: 100px; Adjust the size as needed */
-}
 
+  
 /* Increase paragraph text size */
 p {
     font-size: 16px; /* Adjust the size as needed */
